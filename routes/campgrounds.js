@@ -28,8 +28,9 @@ router.get('/new',
 router.route('/:id')
     .get(catchAsync(ctrlCampground.renderCampgroundId))
     .put(
-        isAuthor, 
-        isLoggedIn, 
+        isLoggedIn,
+        isAuthor,
+        upload.array('image'),  
         validateCampground, 
         catchAsync(ctrlCampground.updateCampgroundId)
     )

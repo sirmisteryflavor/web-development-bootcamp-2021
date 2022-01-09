@@ -98,5 +98,13 @@
             </div>
         </div>
         <% } %>
+    <div id='map' style='width: 100%; height: 300px;'></div>
     </div>
 </div>
+
+<!-- This runs by passing javascript to EJS template and then back to javascript -->
+<script>
+    const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+    const campground = <%- JSON.stringify(campground) %>
+</script>
+<script src="/javascripts/showPageMap.js"></script>

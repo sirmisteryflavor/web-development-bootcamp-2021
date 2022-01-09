@@ -1,6 +1,9 @@
  (function () {
     'use strict'
 
+    // initialize this for every file uploads
+    bsCustomFileInput.init()
+
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const forms = document.querySelectorAll('.needs-validation')
 
